@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>V-CALCULATOR - by MAINUL - X</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header with developer info -->
+        <div class="header">
+            <h1>V-CALCULATOR</h1>
+            <p class="subtitle">by MAINUL - X</p>
+            <a href="https://github.com/M41NUL" class="github-link" target="_blank">github.com/M41NUL</a>
+        </div>
+
+        <!-- Calculator main -->
+        <div class="calculator">
+            <!-- Display -->
+            <div class="display-container">
+                <input type="text" id="display" readonly value="0">
+                <div class="status-bar" id="statusBar">DEG | © 2026 MAINUL - X</div>
+            </div>
+
+            <!-- Buttons grid -->
+            <div class="buttons">
+                <!-- Row 1: Scientific functions -->
+                <button class="btn function" onclick="appendFunction('sin(')">sin</button>
+                <button class="btn function" onclick="appendFunction('cos(')">cos</button>
+                <button class="btn function" onclick="appendFunction('tan(')">tan</button>
+                <button class="btn function" onclick="appendFunction('log(')">log</button>
+                <button class="btn function" onclick="appendFunction('ln(')">ln</button>
+
+                <!-- Row 2 -->
+                <button class="btn function" onclick="appendOperator('**')">x^y</button>
+                <button class="btn function" onclick="appendFunction('sqrt(')">√</button>
+                <button class="btn function" onclick="append('!')">x!</button>
+                <button class="btn function" onclick="append('1/')">1/x</button>
+                <button class="btn function" onclick="toggleDeg()" id="degBtn">DEG</button>
+
+                <!-- Row 3: Special buttons -->
+                <button class="btn special" onclick="clearAll()">AC</button>
+                <button class="btn special" onclick="append('%')">%</button>
+                <button class="btn operator" onclick="append('/')">÷</button>
+                <button class="btn operator" onclick="append('*')">×</button>
+                <button class="btn operator" onclick="append('-')">−</button>
+
+                <!-- Row 4: Numbers -->
+                <button class="btn number" onclick="append('7')">7</button>
+                <button class="btn number" onclick="append('8')">8</button>
+                <button class="btn number" onclick="append('9')">9</button>
+                <button class="btn operator" onclick="append('+')">+</button>
+                <button class="btn function" onclick="appendConstant('pi')">π</button>
+
+                <!-- Row 5 -->
+                <button class="btn number" onclick="append('4')">4</button>
+                <button class="btn number" onclick="append('5')">5</button>
+                <button class="btn number" onclick="append('6')">6</button>
+                <button class="btn equal" onclick="calculate()" rowspan="2">=</button>
+                <button class="btn function" onclick="appendConstant('e')">e</button>
+
+                <!-- Row 6 -->
+                <button class="btn number" onclick="append('1')">1</button>
+                <button class="btn number" onclick="append('2')">2</button>
+                <button class="btn number" onclick="append('3')">3</button>
+                <button class="btn number" onclick="append('0')">0</button>
+                <button class="btn number" onclick="append('.')">.</button>
+            </div>
+        </div>
+
+        <!-- Developer Information -->
+        <div class="developer-info">
+            <div class="contact-grid">
+                <p>👨‍💻 <strong>Md. Mainul Islam</strong></p>
+                <p>🏢 <strong>MAINUL - X</strong></p>
+                <p>🐙 <a href="https://github.com/M41NUL" target="_blank">github.com/M41NUL</a></p>
+                <p>📱 <a href="https://wa.me/8801308850528" target="_blank">+8801308850528</a></p>
+                <p>💬 <a href="https://t.me/mdmainulislaminfo" target="_blank">@mdmainulislaminfo</a></p>
+                <p>📧 <a href="mailto:githubmainul@gmail.com">githubmainul@gmail.com</a></p>
+            </div>
+            <p class="copyright">© 2026 MAINUL - X. All rights reserved. MIT License</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
